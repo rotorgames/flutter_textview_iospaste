@@ -71,9 +71,7 @@ class PasteComponentNativeView: NSObject, UIPasteConfigurationSupporting, Flutte
     }
 
     func createNativeView(view _view: UIView){
-        if #available(iOS 16.0, *) {
-            let textView = UITextView()
-            
+        if #available(iOS 16.0, *) {            
             let configuration = UIPasteControl.Configuration()
             configuration.baseBackgroundColor = UIColor(red: 246/255.0, green: 246/255.0, blue: 246/255.0, alpha: 1) // Makes color closer to AdaptiveTextSelectionToolbar
             configuration.baseForegroundColor = UIColor(white: 0, alpha: 1)
