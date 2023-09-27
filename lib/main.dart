@@ -146,6 +146,9 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ),
                           ),
+                          // Trying to show up the CupertinoTextSelectionToolbarButton above PastComponent
+                          // to pass tap events to both CupertinoTextSelectionToolbarButton and PastComponent but it wasn't succeed.
+                          //TODO: Allow interactions with both CupertinoTextSelectionToolbarButton and PastComponent at the same time
                           Visibility(
                             visible: false,
                             maintainAnimation: true,
