@@ -124,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 for (var item in editableTextState.contextMenuButtonItems) {
                   if (item.type == ContextMenuButtonType.paste) {
-                    final pastItem = item;
+                    final pasteItem = item;
                     children.add(
                       Stack(
                         children: [
@@ -140,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   onPasted: (pasted) {
                                     _textEditingController.selection
                                         .textInside(pasted);
-                                    pastItem.onPressed?.call();
+                                    pasteItem.onPressed?.call();
                                   },
                                 ),
                               ),
