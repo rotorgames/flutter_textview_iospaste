@@ -8,9 +8,10 @@ import Flutter
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
       GeneratedPluginRegistrant.register(with: self)
+      
       weak var registrar = self.registrar(forPlugin: "paste_control_plugin")
 
-      let factory = FLNativeViewFactory(messenger: registrar!.messenger())
+      let factory = PasteComponentNativeViewFactory(messenger: registrar!.messenger())
       
       registrar!.register(
           factory,

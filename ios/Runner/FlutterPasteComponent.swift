@@ -9,7 +9,7 @@ import Foundation
 import Flutter
 import UIKit
 
-class FLNativeViewFactory: NSObject, FlutterPlatformViewFactory {
+class PasteComponentNativeViewFactory: NSObject, FlutterPlatformViewFactory {
     private var messenger: FlutterBinaryMessenger
 
     init(messenger: FlutterBinaryMessenger) {
@@ -22,7 +22,7 @@ class FLNativeViewFactory: NSObject, FlutterPlatformViewFactory {
         viewIdentifier viewId: Int64,
         arguments args: Any?
     ) -> FlutterPlatformView {
-        return FLNativeView(
+        return PasteComponentNativeView(
             frame: frame,
             viewIdentifier: viewId,
             arguments: args,
@@ -35,7 +35,7 @@ class FLNativeViewFactory: NSObject, FlutterPlatformViewFactory {
     }
 }
 
-class FLNativeView: NSObject, UIPasteConfigurationSupporting, FlutterPlatformView {
+class PasteComponentNativeView: NSObject, UIPasteConfigurationSupporting, FlutterPlatformView {
     var pasteConfiguration: UIPasteConfiguration?
     var currentMessenger: FlutterBinaryMessenger?
     var methodChannel: FlutterMethodChannel?
